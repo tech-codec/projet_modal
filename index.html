@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cedb47a170.js" crossorigin="anonymous"></script>
+    <script src="script.js" async></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#modal_1" id="show_modal">Show modal</a>
+
+    <aside id="modal_1" role="dialog" aria-hidden="true" aria-labelledby="modal_label" class="hidden">
+
+        <form class="modal_form">
+
+            <div class="close_modal"><i class="fa-solid fa-xmark"></i></div>
+
+            <div class="modal_title">
+                <i id="modal_label" class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="content_modal">
+
+                <div class="form_group">
+                    <label for="label_1" class="form_label">Username</label>
+                    <input type="text" id="label1" class="form_input">
+                </div>
+
+                <div class="form_group">
+                    <label for="label_2" class="form_label">Passwod</label>
+                    <input type="password" id="label2" class="form_input">
+                </div>
+
+                <div class="form_group">
+                    <input type="checkbox" id="label3" class="form_input_check"><label for="label_3" class="form_label_check">Keep me sign in
+                    </label>
+                </div>
+
+                <div class="form_group">
+                    <button class="btn">Sign in</button>
+                </div>
+
+                <div class="form_group_bar">
+                    <div></div>
+                    <a href="#">Forgot password</a>
+                </div>
+
+            </div>
+
+        </form>
+
+       
+
+    </aside>
+
+</body>
+</html>

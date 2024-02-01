@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: red;
+}
+
+
+#show_modal{
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 40px;
+    border-radius: 20px;
+    background: green;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 1s, box-shadow 1s;
+    cursor: pointer;
+}
+
+#show_modal:hover{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+#modal_1{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate_modal 1s both;
+}
+
+#modal_1[aria-hidden="true"]{
+    animation-name: animate_modal_reverse;
+}
+
+@keyframes animate_modal{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes animate_modal_reverse{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.modal_form{
+    position: absolute;
+    /*top: 50%;*/
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 500px;
+    border-radius: 10px;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/skys.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    animation: animate_modal_form 1s both;
+}
+
+#modal_1[aria-hidden="true"] .modal_form{
+    animation-name: animate_modal_form_reverse;
+}
+
+@keyframes animate_modal_form{
+    from{
+        top: -50%;
+    }
+    to{
+        top: 50%;
+    }
+}
+
+@keyframes animate_modal_form_reverse{
+    from{
+        top: 50%;
+    }
+    to{
+        top: -50%;
+    }
+}
+
+.close_modal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close_modal i{
+    font-size: 35px;
+}
+
+.modal_title{
+    position: absolute;
+    top:-25px;
+    margin-left: 50%;
+    transform: translate(-50%, -25px);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_title #modal_label{
+    font-size: 70px;
+    color: #fff;
+}
+
+.content_modal{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+}
+
+.form_group{
+    margin: 0 40px 20px 40px;
+}
+
+.form_label{
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form_input{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.form_input:focus{
+    border: 1px solid blue;
+}
+
+.form_label_check{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.form_input_check{
+    cursor: pointer;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    background: rgba(4, 20, 136, 0.5);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.btn:hover{
+    background: rgba(4, 20, 136, 0.7);
+}
+
+.form_group_bar{
+    margin: 80px 40px 20px 40px;
+    text-align: center;
+}
+
+
+.form_group_bar div{
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+.form_group_bar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@media(max-width:1400px){
+    .modal_title{
+        width: 75px;
+        height: 75px;
+        top:-7%;
+        transform:translate(-50%,-7%);
+    }
+    .modal_form{
+        width: 50%;
+    }
+
+    #show_modal{
+        width: 25%;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media(max-width:600px){
+    .modal_form{
+        width: 65%;
+    }
+
+    .modal_title{
+        width: 75px;
+        height: 75px;
+        top:-7%;
+        transform:translate(-50%,-7%);
+    }
+
+    #show_modal{
+        width: 40%;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+
